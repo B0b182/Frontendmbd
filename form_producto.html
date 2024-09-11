@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <nav class="navbar bg-dark border-bottom border-body barra" data-bs-theme="dark">
+                <a class="navbar-brand ele " href="/index.html">inicio</a>
+                <a class="navbar-brand ele" href="/clientes.html">Clientes</a>
+                <a class="navbar-brand ele" href="/productos.html">Productos</a>
+
+
+
+            </nav>
+
+
+
+        </div>
+
+    </header>
+
+    <section class="container">
+
+        <div class="row aling-items-center mb-4 ">
+            <span class="fw-bold w-auto spn">formulario Productos </span>
+
+
+            <div class="row">
+                <form class="mt-4" action="" onsubmit="" method="POST">
+            </div class="mb-3">
+            <label for="producto" class="form-label"> producto</label>
+            <input type="text" class="form-control" name="productoC" id="productoC">
+            <div>
+
+            </div class="mb-3">
+            <label for="codigo" class="form-label"> codigo </label>
+            <input type="number" class="form-control" name="codigoC" id="codigoC">
+            <div>
+
+            </div class="mb-3">
+            <label for="proveedor" class="form-label"> proveedor</label>
+            <input type="text" class="form-control" name="proveedorC" id="proveedorC">
+            <div>
+
+            </div class="mb-3">
+            <label for="unidades" class="form-label"> unidades</label>
+            <input type="text" class="form-control" name="unidadesC" id="unidadesC">
+            <div>
+
+            </div class="mb-3">
+            <label for="ingreso" class="form-label"> ingreso</label>
+            <input type="text" class="form-control" name="ingresoC" id="ingresoC">
+            <div>
+
+
+
+
+                <button id="btn-guardar" type="button" class="btn btn-outline-info butn">Guardar/Modificar
+                </button>
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+    <script src="/js/request.js"></script>
+    <script src="/js/productos.js"></script>
+    <script>
+        window.onload = () => {
+            let boton = document.getElementById('btn-guardar')
+
+            const u = new URLSearchParams(
+                window.location.search)
+            let id = u.get('id')
+            cargardatos(u.get('id'));
+            if (id !== null
+            ) {
+                boton.onclick = () => {
+                    editarproducto(u.get('id'));
+
+                }
+                console.log('editar');
+
+
+            } else {
+                boton.onclick = () => {
+                    guardarproducto();
+                }
+                console.log('guardar')
+
+
+            }
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

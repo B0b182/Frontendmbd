@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <nav class="navbar bg-dark border-bottom border-body barra" data-bs-theme="dark">
+                <a class="navbar-brand ele " href="/index.html">inicio</a>
+                <a class="navbar-brand ele" href="/clientes.html">Clientes</a>
+                <a class="navbar-brand ele" href="/productos.html">Productos</a>
+
+
+
+            </nav>
+
+
+
+        </div>
+
+    </header>
+
+    <section class="container">
+
+        <div class="row aling-items-center mb-4 ">
+            <span class="fw-bold w-auto spn">modulo clientes </span>
+            <button class="btn btn-outline-info butn" onclick="window.location='form_clientes.html'">agregar</button>
+
+        </div>
+    </section>
+
+    <table class="table table-bordered border-success container">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Cedula</th>
+                <th scope="col">Correo</th>
+                <th scope="col">telefono</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="llenarcli">
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="/js/request.js"></script>
+    <script src="/js/clientes.js"></script>
+    <script> window.onload = function () {
+            mostrarDatos();
+
+        }</script>
+
+</body>
+
+</html>
