@@ -1,4 +1,4 @@
-const url = 'http://localhost:5000/api/'
+const url = 'https://backendmongodb-mcso.onrender.com/api/'
 sendRequest = (endPoint, method, data) => {
     let request = new XMLHttpRequest();
     request.open(method, url + endPoint);
